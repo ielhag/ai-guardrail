@@ -9,7 +9,7 @@ Companies want their people using AI tools, but the riskiest moment is only a fe
 
 I wanted to answer one question in a week: **can a browser extension catch that moment reliably, and coach the person instead of blocking them, without breaking their work?**
 
-The short answer is yes for pasted secrets and personal data on the main chat sites, partly for typed-then-sent text, and no for anything outside the browser. **[MEMO.md](MEMO.md)** has the evidence, what's fragile, and what I'd drop.
+The short answer is yes for pasted secrets and personal data on the main chat sites, partly for typed-then-sent text, and no for anything outside the browser. **[FINDINGS.md](FINDINGS.md)** has the evidence, what's fragile, and what I'd drop.
 
 ## What it does
 - **Paste check:** catches a risky paste on ChatGPT, Claude, Gemini, Perplexity, Copilot, DeepSeek and Poe before the page sees it, and offers *Redact and continue*, *Continue anyway* (logged), or *Cancel*.
@@ -37,7 +37,7 @@ Current result: 20/20 risky samples caught, 0/23 false alarms, about 0.03 ms per
 | `test.cjs` | Risky and normal prompts, with accuracy and timing checks |
 
 ## Status
-A feasibility demo, not a product. Rules are regular expressions, and the known gaps are listed in [MEMO.md](MEMO.md#known-gaps-checked-not-fixed).
+A feasibility demo, not a product. Rules are regular expressions, and the known gaps are listed in [FINDINGS.md](FINDINGS.md#known-gaps-checked-not-fixed).
 
 ## Use cases
 | Team | The risky moment | What the guardrail does |

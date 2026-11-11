@@ -1,10 +1,10 @@
-# Feasibility memo: coaching users before risky AI use, from the browser
+# Feasibility findings: coaching users before risky AI use, from the browser
 
 **Question.** Can a browser extension reliably detect a risky moment with an AI tool, and step in before the user acts, without breaking their work?
 
 **Short answer.** Yes for pasted secrets and personal data on the main chat sites. Partly for typed-then-sent text. Weak for sign-up detection. No for anything outside the browser.
 
-Time box: one week of evenings. Everything below comes from the demo in this repo.
+Built as a one-week feasibility study. Everything below comes from the demo in this repo.
 
 ## What I built
 A Manifest V3 Chrome extension (about 250 lines, no dependencies):
@@ -67,7 +67,7 @@ The AI vendors don't need to trust this layer. It runs on the employer's managed
 **Why would a customer trust it with its policy and data?**
 - **Keep as little as possible.** Detection runs on the device. Only event metadata goes back ("secret pasted into an unapproved tool, user redacted"), never the secret or the prompt. This demo already works that way.
 - **Customer-owned policy.** The security team sets the rules. The vendor provides the system and the defaults.
-- **Proof:** SOC 2 Type II and ISO 27001, customer security reviews, and data processing agreements.
+- **What a company would need before deploying it:** a security review, a data processing agreement, and, for a vendor, SOC 2 or ISO 27001.
 - **The honest risk:** an agent next to every user is a valuable target, and if it fails, it fails everywhere (the 2024 CrowdStrike outage). So staged rollouts and the fail-open behaviour described above are requirements, not extras.
 
 ## Next steps
