@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "AI Guardrail (feasibility demo)",
+  "version": "0.1.0",
+  "description": "Coaches users before secrets or personal data are pasted or sent to AI tools. Demo only.",
+  "permissions": ["storage"],
+  "action": { "default_popup": "popup.html", "default_title": "AI Guardrail" },
+  "content_scripts": [{
+    "matches": [
+      "https://chatgpt.com/*", "https://claude.ai/*", "https://gemini.google.com/*",
+      "https://www.perplexity.ai/*", "https://copilot.microsoft.com/*", "https://chat.deepseek.com/*", "https://poe.com/*"
+    ],
+    "js": ["detect.js", "content.js"],
+    "run_at": "document_start",
+    "all_frames": false
+  }]
+}

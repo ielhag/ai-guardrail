@@ -1,0 +1,15 @@
+<!doctype html>
+<meta charset="utf-8">
+<style>
+  body{font:13px/1.4 system-ui,sans-serif;width:340px;margin:0;padding:12px;color:#1d2125;background:#fff}
+  h1{font-size:15px;margin:0 0 8px}h2{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:#5f6b76;margin:12px 0 4px}
+  table{width:100%;border-collapse:collapse}td{padding:3px 0;border-bottom:1px solid #eceff2;vertical-align:top}
+  td:last-child{text-align:right;color:#5f6b76}.high{color:#c5221f}.medium{color:#b06000}
+  button{font:inherit;margin-top:10px;border:1px solid #c3c9d0;background:#fff;border-radius:6px;padding:4px 8px;cursor:pointer}
+  @media (prefers-color-scheme:dark){body{background:#1f2328;color:#e6e9ec}td{border-color:#333a42}button{background:#2a3037;color:#e6e9ec}}
+</style>
+<h1>AI Guardrail</h1>
+<h2>AI tools seen</h2><table id="tools"></table>
+<h2>Recent interventions</h2><table id="events"></table>
+<button id="clear">Clear log</button>
+<script src="popup.js"></script>
