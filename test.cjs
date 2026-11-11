@@ -1,4 +1,4 @@
-// node test.cjs: checks detection, measures false alarms and latency. Numbers feed MEMO.md.
+// node test.cjs: checks detection, measures false alarms and latency. Numbers feed FINDINGS.md.
 const assert = require('node:assert/strict');
 const { scan, redact, isWorkEmail } = require('./detect.js');
 

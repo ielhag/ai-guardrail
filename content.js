@@ -36,7 +36,7 @@ document.addEventListener('paste', e => {
 }, true);
 
 // 2) Send: catch text that was typed rather than pasted, whether sent by Enter or the Send button.
-// ponytail: per-site selector list; breaks when a site renames its button (see MEMO.md)
+// Note: per-site selector list; breaks when a site renames its button (see FINDINGS.md)
 const SEND_BTN = 'button[data-testid="send-button"], button[aria-label*="send" i], button.send-button';
 // Prefer the Send button nearest the composer, so a page-level "Send feedback" button is never clicked.
 function sendButtonFor(el) {
