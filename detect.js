@@ -39,7 +39,7 @@
       }
     }
     // A single address ("reply to jane@...") is normal; a list of them looks like exported customer data.
-    // ponytail: count threshold, not context; a real product would weigh approved tool + user's own domain
+    // Note: count threshold, not context; a real product would weigh approved tool + user's own domain
     const emails = new Set(out.filter(f => f.id === 'email').map(f => f.match.toLowerCase()));
     return emails.size >= EMAIL_LIST_MIN ? out : out.filter(f => f.id !== 'email');
   }
@@ -50,7 +50,7 @@
     return t;
   }
 
-  // ponytail: short static list; a real deployment would pull a maintained free-mail domain list
+  // Note: short static list; a real deployment would pull a maintained free-mail domain list
   const PERSONAL = new Set(['gmail.com', 'googlemail.com', 'yahoo.com', 'outlook.com', 'hotmail.com', 'live.com', 'icloud.com', 'me.com', 'aol.com', 'proton.me', 'protonmail.com']);
   const isWorkEmail = e => /@/.test(e) && !PERSONAL.has(e.split('@').pop().toLowerCase().trim());
 
