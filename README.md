@@ -46,6 +46,7 @@ A feasibility demo, not a product. Rules are regular expressions, and the known 
 | **Healthcare** | Asking an AI to summarize notes that include patient identifiers | Flags SSNs and other identifiers, and reminds the person to use the approved, compliant tool |
 | **Support and sales** | Pasting a customer export or a list of emails to draft outreach | Flags lists of email addresses and card numbers, while leaving a single address in a normal prompt alone |
 | **Finance and legal** | Drafting with deal names, pricing, or contract terms | With company-defined keywords and code names (see the roadmap), coaches before confidential terms leave |
+| **Regulated industries** | Pasting text that carries company-defined markings, like a "Proprietary" or controlled-document legend, into an unapproved tool | With markings configured by the company, coaches before that text is sent and points to the approved tool |
 | **Security and IT** | Not knowing which AI tools people actually use | The inventory shows every AI tool used and every intervention, which is the starting point for an approved-tools list |
 | **Policy rollout** | People don't remember the AI policy they signed | The coaching card explains the rule at the moment it matters, which teaches better than annual training |
 
